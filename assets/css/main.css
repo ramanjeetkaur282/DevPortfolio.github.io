@@ -564,7 +564,12 @@ input, select, textarea {
 				.row.gtr-200.gtr-uniform > * {
 					padding-top: 3rem;
 				}
-
+			.Technology {
+				font-style: italic;
+				font-size: 0.8em; /* Adjust size as needed */
+				color: #999; /* Light gray color, adjust as needed */
+			}
+				
 		@media screen and (max-width: 1680px) {
 
 			.row {
