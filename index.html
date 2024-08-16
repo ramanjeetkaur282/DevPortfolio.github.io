@@ -10,8 +10,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC&family=Poppins&display=swap');
+			</style>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>	
 		<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+		<script src="assets/js/clock.js"></script>
 		<script type="text/javascript">
    				(function(){
       				emailjs.init("KBqfGWKeLJnJ8HTgU"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
@@ -20,22 +24,37 @@
 	</head>
 
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
-
+            <div class="clock"> 
+				<div>
+					<div id="clockHours" class="time"></div>
+				</div>
+				<div>
+					<div id="clockMinutes" class="time"></div>
+				</div>
+				<div>
+					<div id="clockSeconds" class="time"></div>
+				</div>
+			</div>
 				<!-- Intro -->
 					<div id="intro">
 						<h1>Ramanjeet Kaur</h1>
+						
+						<p class="role" id="role1">Full Stack Developer</p>
+					
 						<p>Welcome to my realm, where every keystroke is a step toward a boundless tomorrow.</p>
 						<ul class="actions">
 							<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
 					</div>
+					
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">About Me</a></li>
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#skills">Certifications</a></li>
 							<li><a href="#posts">Portfolio</a></li>
 							<li><a href="#footer">Contact</a></li>
 						</ul>
@@ -46,7 +65,7 @@
 									<li><a href="https://github.com/ramanjeetkaur282" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
-
+					
 				<!-- Main -->
 					<div id="main">
 
@@ -55,7 +74,7 @@
 								<header class="major">
 									<!-- <span class="date">April 25, 2017</span> -->
 									<h3><a href="#">
-										My Journey As Software Developer</a></h3>
+										My Journey As A Developer</a></h3>
 									<p>From the moment I first tapped out a simple "Hello World" on my keyboard, I was hooked on the magic of software development. Each project I've taken on has been a new puzzle, a fresh canvas, a thrilling adventure into the realm of code. I’ve built bridges between ideas and reality, transforming abstract concepts into dynamic, user-friendly applications. My journey is one of continuous learning, creativity, and problem-solving, driven by a passion to innovate and shape the digital future.
 										</p>
 								</header>
@@ -65,26 +84,65 @@
 								</ul> -->
 							</article>
 
+						<!--Skills-->
+						<div id="skills" >
+							<h2 class="skillHead">Skills</h2>
+							<div class="skillBox">
+							
+							<img class="skillItem" src="images/html-5.png" alt="JavaScript">
+							<img class="skillItem" src="images/css.png" alt="JavaScript">
+							<img class="skillItem" src="images/js.png" alt="JavaScript">
+							<img class="skillItem" src="images/nodejs.png" alt="JavaScript">
+							<img class="skillItem" src="images/react.png" alt="JavaScript">
+							<img class="skillItem" src="images/java.png" alt="JavaScript">
+							<img class="skillItem" src="images/mysql.png" alt="JavaScript">
+							<img class="skillItem" src="images/github.png" alt="JavaScript">
+							<img class="skillItem" src="images/typescript.png" alt="JavaScript">
+							<img class="skillItem" src="images/mongodb.png" alt="JavaScript">
+							<img class="skillItem" src="images/Appian.png" alt="JavaScript">
+							<img class="skillItem" src="images/PowerApps.png" alt="JavaScript">
+							<img class="skillItem" src="images/powerAutomate.png" alt="JavaScript">
+							<img class="skillItem" src="images/visual-studio.png" alt="JavaScript">
+							<img class="skillItem" src="images/web.png" alt="JavaScript">
+						</div>	
+						</div>
+						<!--Certifications-->
+						<div id="cerifications" >
+							<h2 class="skillHead">Certifications</h2>
+							<div class="certification-container">
+								<div><img src="images/AWS 1.png" alt="AWS Certified Cloud Practitioner" class="certificate"></div>
+								<div><img src="images/AWS 2.png" alt="AWS Certified Solutions Architect" class="certificate"></div>
+								<div><img src="images/AppianCert.png" alt="Associate Developer" class="certificate"></div>
+								</div>
+						</div>
+
 						<!-- Posts -->
+						 <div class="portfolio-project">
+						<nav class="navProject">
+							<ul class="nav-menu-project">
+								<li><a href="#" class="filter-btn" data-category="java">Java Projects</a></li>
+								<li><a href="#" class="filter-btn" data-category="frontend">Front End Projects</a></li>
+								<li><a href="#" class="filter-btn" data-category="cloud">Cloud Projects</a></li>
+								<li><a href="#" class="filter-btn" data-category="all">All Projects</a></li>
+							</ul>
+						</nav>
+					</div>
 							<section class="posts" id="posts">
 								<!-- Airline Booking System-->
-								<article>
+								<article class="project java">
 									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="https://github.com/ramanjeetkaur282/AirlineTicketBooking">Airline Ticket Booking<br />
-										</a></h2>
+										<h2><a href="https://github.com/ramanjeetkaur282/AirlineTicketBooking">Airline Ticket Booking</a></h2>
 									</header>
-									<a href="https://github.com/ramanjeetkaur282/AirlineTicketBooking" class="image fit"><img src="images/AirplaneTicket.png" alt="" /></a>
-									<p>Are you ready to experience a hassle-free way to book and manage your flights? Dive into our innovative Airline Ticket Booking System, crafted with precision using Java, Swing, AWT, MySQL, and JDBC. </p>
-									<p class="Technology">Tech Stack Used : Java,Java Swing and AWT, JDBC, MySQL Server</p>
+									<a href="https://github.com/ramanjeetkaur282/AirlineTicketBooking" class="image fit"><img src="images/AirplaneTicket.png" alt="Airline Ticket Booking System Screenshot" /></a>
+									<p>Experience a hassle-free way to book and manage flights with our Airline Ticket Booking System, crafted using Java, Swing, AWT, MySQL, and JDBC.</p>
+									<p class="Technology">Tech Stack Used: Java, Java Swing and AWT, JDBC, MySQL Server</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/ramanjeetkaur282/AirlineTicketBooking" class="button">View Project</a></li>
 									</ul>
 								</article>
 								<!-- ATM Simulator Project-->
-								<article>
+								<article class="project java">
 									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
 										<h2><a href="https://github.com/ramanjeetkaur282/ATMSimulator">ATM Simulator Project<br />
 										</a></h2>
 									</header>
@@ -95,10 +153,22 @@
 										<li><a href="https://github.com/ramanjeetkaur282/ATMSimulator" class="button">View Project</a></li>
 									</ul>
 								</article>
-								<!-- PlacePicker App-->
-								<article>
+								<!--Job-Portal-->
+								<article class="project frontend">
 									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
+										<h2><a href="https://github.com/ramanjeetkaur282/aws-nodejsapi.git">Job Portal (MERN STACK)<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/ramanjeetkaur282/aws-nodejsapi.git" class="image fit"><img src="images/jobPortal.jpg" alt="" /></a>
+									<p>Imagine a job portal that helps you find your dream job with ease! I created this platform using modern tools to make sure it's fast, easy to navigate, and looks great on any device. I set up everything to run smoothly on the cloud, so you never have to worry about it going down. This job portal is designed to help you connect with opportunities quickly, without any hassle.</p>
+									<p class="Technology">Tech Stack Used : React, Bootstrap, MongoDB, AWS EC2, Express, Nodejs</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/ramanjeetkaur282/aws-nodejsapi.git" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<!-- PlacePicker App-->
+								<article class="project frontend">
+									<header>
 										<h2><a href="https://react-07-place-picker.vercel.app/">QuestNavigator: PlacePicker App<br />
 										</a></h2>
 									</header>
@@ -110,7 +180,7 @@
 									</ul>
 								</article>
 								<!--Project Management-->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 22, 2017</span> -->
 										<h2><a href="https://react-05-ramanjeetkaur282.vercel.app/">ProTask: Project Manager App<br />
@@ -125,7 +195,7 @@
 									</ul>
 								</article>
 								<!--Investment Calculator-->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 7, 2017</span> -->
 										<h2><a href="https://github.com/ramanjeetkaur282/Python/blob/main/BMI_Calculator.ipynb">Wealthwise:Investment Calculator<br />
@@ -140,7 +210,7 @@
 									</ul>
 								</article>
 								 <!-- To-Do List-->
-								 <article>
+								 <article class="project frontend">
 									<header>
 										<!-- <span class="date">April 18, 2017</span> -->
 										<h2><a href="https://todolist-zeta-eight.vercel.app/">TaskMaster To Do List<br />
@@ -155,7 +225,7 @@
 									</ul>
 								</article>
 								<!-- Guess the Number Game -->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 18, 2017</span> -->
 										<h2><a href="https://guessingnumber.vercel.app/">MindMaze:Number Guessing Game<br />
@@ -170,7 +240,7 @@
 									</ul>
 								</article>
 								<!-- Tic Tac Toe Game -->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 18, 2017</span> -->
 										<h2><a href="https://tic-tac-toe-hazel-six.vercel.app/">VictoryVerse:Tic-Tac-Toe Game<br />
@@ -186,7 +256,7 @@
 								</article>
 							   
 								<!--React Quiz-->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 11, 2017</span> -->
 										<h2><a href="https://react-quiz-self.vercel.app/">React Quiz Quest: A Journey of Knowledge<br /></a></h2>
@@ -204,7 +274,7 @@
 								</article>
 								
 								<!-- Sweet Tooth Bakery-->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 18, 2017</span> -->
 										<h2><a href="https://sweet-tooth-cjey-57r89fww2-ramanjeetkaur282.vercel.app">Sweet Tooth Bakery Homepage<br />
@@ -221,7 +291,7 @@
 									</ul>
 								</article>
                                 <!--Shopping Cart-->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 14, 2017</span> -->
 										<h2><a href="https://react-06-shopping-app.vercel.app/">Elegant Attire Checkout<br />
@@ -239,7 +309,7 @@
 									</ul>
 								</article>
 								<!-- Food Order App-->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 18, 2017</span> -->
 										<h2><a href="https://foodlicious.vercel.app/">Feastify - Food Order App<br />
@@ -254,7 +324,7 @@
 									</ul>
 								</article>
 								<!-- CountDown App -->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 18, 2017</span> -->
 										<h2><a href="https://react-04-count-down-challenge.vercel.app/">Time Crunch<br />
@@ -271,7 +341,7 @@
 									</ul>
 								</article>
 								<!-- Budget List-->
-								<article>
+								<article class="project frontend">
 									<header>
 										<!-- <span class="date">April 18, 2017</span> -->
 										<h2><a href="https://budgetlist.vercel.app/">Expense Tracker<br />
@@ -281,13 +351,14 @@
 									<p>This project allows users to add their daily expenses and view them both as a list and a bar chart. It's designed to help users keep track of their spending habits over time.</p>
 									<p class="Technology"> Tech Stack Used : React, JavaScript, HTML5, CSS3
 									</p>
-									<!-- <span>GitHub Repo: <a href="https://github.com/ramanjeetkaur282" class="icon brands alt fa-github"><span class="label">GitHub</span></a></span> -->
+			
 									<ul class="actions special">
 										<li><a href="https://budgetlist.vercel.app/" class="button">View Project</a></li>
 									</ul>
 								</article>
 
 							</section>
+						
 
 						<!-- Footer -->
 							<!-- <footer>
@@ -363,7 +434,7 @@
 					<div id="copyright">
 						<ul><li>&copy; Ramanjeet Kaur</li>
 						<li>This Portfolio is work in Progress.</li>
-						<li>Last Updated: July 11th,2024</li>
+						<li>Last Updated: August 16th,2024</li>
 						</ul>
 						<!-- <li>Design: <a href="https://html5up.net">HTML5 UP</a></li> -->
 					</div>
@@ -430,6 +501,19 @@
 				return isValid;
 			}
 		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+            const sphere = document.querySelector('.sphere');
+            const skills = sphere.querySelectorAll('.skill');
+            const spaceBetween = 2000; // Adjust space between skills
+
+            skills.forEach((skill, index) => {
+            const position = index * spaceBetween - ((skills.length - 1) * spaceBetween) / 2;
+            skill.style.transform = `translate3d(${position}px, 0, 0)`;
+    });
+});
+
+			</script>
 		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -438,6 +522,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/transition.js"></script>
+			<script src="assets/js/project.js"></script>
 
 	</body>
 </html>

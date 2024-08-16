@@ -36,7 +36,217 @@ body {
 ol, ul {
 	list-style: none;
 }
+/* ------My Code---------------- */
 
+/*Clock at top */
+.clock{	
+	
+	display: inline-flex;
+	top:3px;
+	position: fixed;
+}
+
+.time{
+	
+	color:white;
+	font-size:15px;
+	text-align: center;
+	margin: 0 1px;
+}
+
+/*Skills*/
+#skills{	
+	color: white;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	height: 500px;
+	perspective: 1000px;
+}
+
+.skillHead {
+	margin: 0 0 4rem 0;
+	text-align: center;
+}
+
+
+.skillItem {
+	position:relative;
+    width: 75px;
+    height: 65px;   
+    animation: spin 15s infinite linear;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+	transform-style: preserve-3d;
+	margin: 10px; 
+    transition: transform 0.3s ease-out;
+}
+
+.skillItem:hover {
+    transform: scale(1.1); /* Example hover effect */
+}
+.skillBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotateY(-60deg);
+    }
+    to {
+        transform: rotateY(60deg);
+    }
+}
+@media (max-width: 480px) {
+    .skill {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.role {
+    font-size: 300%;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+	text-align: justify;
+	margin: 0 0 2rem 0;
+	
+	display: block;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+/*------Certifications-----*/
+.certification-container{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height:auto;
+	justify-content: center;
+}
+
+.certificate{
+	height:15rem;
+}
+
+/*-------Projects------*/
+/* Hide all projects by default */
+.project {
+    display: none;
+}
+
+/* Show all projects */
+.project.all {
+    display: block;
+}
+
+/* Show projects based on category */
+.project.java {
+    display: block;
+}
+
+.project.javaScript {
+    display: block;
+}
+
+.project.cloud {
+    display: block;
+}
+
+.navProject {
+    background-color: #fff;  
+    padding: 0px;
+    position: sticky;
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: auto;  
+}
+
+.nav-menu-project {
+    list-style:none;
+    margin: 0rem;
+    padding: 2rem;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;	
+	height: auto;
+	align-items: stretch; /* Ensures items align properly and don't overlap */
+    gap: 1rem; 
+    justify-content: center;	
+}
+
+.nav-menu li {
+    margin: 2px 4px;
+	margin-bottom: 1rem;
+}
+
+.nav-menu a {
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #444;
+	padding: 0.5rem 1rem; /* Adjust padding for a button-like appearance */
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+   
+}
+
+.nav-menu a:hover {
+    background-color: #555;
+    color: #ddd;
+
+}
+
+.portfolio-project{
+	padding:0% !important;
+	border-top: 0;
+}
+
+.filter-btn{
+	text-decoration: none;
+    margin-right: 1rem;
+    font-size: medium;
+    font-style: normal;
+    background-color: #1e252d;
+    color: #eeeeee;
+    padding: 0.5rem 1rem; /* Uniform padding */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    text-align: center;	
+}
+
+.filter-btn:hover {
+    background-color: #2a333b;
+    color: #ffffff;
+}
+
+.active-category {
+    background-color: #9a0a0a; /* Change this to the desired background color */
+    color: #ddd; /* Change this to the desired text color */
+}
+
+
+/* You can style your buttons and section here */
+
+
+
+
+
+
+/*----------------------------------------------------*/
 blockquote, q {
 	quotes: none;
 }
@@ -3239,11 +3449,11 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../images/bg1.jpg");
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
+			background-attachment:scroll,								scroll,														scroll;
 			z-index: -1;
 		}
 
@@ -3953,7 +4163,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		color: #717981;
+		color: #abb5c0;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -4391,7 +4601,7 @@ input, select, textarea {
 	#copyright {
 		color: #ffffff;
 		position: relative;
-		color: rgba(255, 255, 255, 0.25);
+		/* color: rgba(250, 229, 229, 0.25); */
 		cursor: default;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 0.8rem;
