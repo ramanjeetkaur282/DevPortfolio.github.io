@@ -85,9 +85,6 @@ ol, ul {
     transition: transform 0.3s ease-out;
 }
 
-.skillItem:hover {
-    transform: scale(1.1); /* Example hover effect */
-}
 .skillBox {
     display: flex;
     flex-wrap: wrap;
@@ -124,6 +121,47 @@ ol, ul {
     opacity: 0;
 }
 
+/*-------------------------Experience----------------------*/
+.experiences{
+	color: white;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	perspective: 1000px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;	
+}
+
+.experience-header{
+	margin: 0 0 4rem 0;
+	text-align: center;
+}
+
+
+.experience{
+	padding:25px;
+	color:black;
+	background-color: #e6dddd;
+	border-radius:10px;
+	font-size: small;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  margin: 20px;
+}
+
+.experience:hover{
+	transform: rotateY(5deg) rotateX(5deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.role-header{
+	font-size:2em;
+}
+
 
 /*------Certifications-----*/
 .certification-container{
@@ -136,6 +174,10 @@ ol, ul {
 
 .certificate{
 	height:15rem;
+}
+
+.certificate:hover{
+	transform: scale(1.1);
 }
 
 /*-------Projects------*/
